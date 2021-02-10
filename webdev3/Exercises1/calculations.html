@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset=utf-8 />
+    <title>JavaScript program to perform basic arithmetic Operations </title>
+
+</head>
+
+<body>
+
+    <buttonon onclick="myCalculator()">
+        Click to start
+        </button>
+
+        <script>
+            function myCalculator() {
+
+                var num1 = prompt('Enter the First Number  ');
+                var num2 = prompt('Enter the Second Number ');
+                var operator = prompt('Choose your operator : + , - , * , / ');
+                switch (operator) {
+                    case "+":
+                        ans = Number(num1) + Number(num2);
+
+                        break;
+
+                    case "-":
+                        ans = Number(num1) - Number(num2);
+
+                        break;
+                    case "*":
+                        ans = Number(num1) * Number(num2);
+
+                        break;
+                    case "/":
+                        ans = Number(num1) / Number(num2);
+
+                        break;
+                    default:
+                        alert('Please input a valid operator');
+
+                }
+                document.write(`${num1} ${operator} ${num2}=${ans}`)
+
+            }
+
+        </script>
+
+</body>
+
+</html
