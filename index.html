@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        form{
+           text-align: center;
+           margin-top: 50px;
+           background-color: aquamarine;
+           width: 500px;
+           height: 500px;
+        }
+           a {  
+            display: block;  
+            margin: 0;  
+            padding: 5px 10px 5px 20px;  
+            color: #777777;  
+            text-decoration: none;  
+            border-bottom: 1px dotted #666666;  
+            background: url("orange_file.gif") no-repeat 10px center #F9F9F9;  
+            outline: none;  
+        }  
+        ul {  
+            margin: 0;  
+            padding: 0;  
+            list-style: none;  
+        }  
+        li {  
+            margin: 0 0 3px 0;  
+            padding: 0;  
+            display: list-item;  
+            text-align: -webkit-match-parent;  
+        }  
+        #container {  
+            display: block;  
+            width: 700px;  
+            padding: 25px;  
+            background-color: #F9F9F9;  
+            margin-bottom: 30px;  
+        
+        }
+    </style>
+</head>
+<body>
+    <form id="taskform" method="POST">
+        <p> Enter your Task</p>
+        <input name="tasks" type="text" placeholder="Enter Task">
+        <button id="submit"type="submit" name="submit"> Check </button>
+        <div id="display"></div>
+
+    </form>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="interactions.js"></script>
+</body>
+</html>
