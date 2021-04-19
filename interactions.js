@@ -1,4 +1,16 @@
 $(document).ready(function(){
+    $.get('tasks.txt', function (data) {  
+        var myHrefCollection = '<div>';  
+        var myData = data.split("\n");  
+        for (i = 0; i < myData.length; i++) {  
+            if (myData[i] != null || myData[i] != undefined)  
+                myHrefCollection += '<p>' + myData[i] + '</p>';  
+        }  
+        myHrefCollection += '</div>';  
+        $('#display').html(myHrefCollection);  
+
+    });  
+    
 
     $("#taskform").submit(function(e){
         e.preventDefault();
@@ -10,31 +22,16 @@ $(document).ready(function(){
                 var jsonData = JSON.parse(response)
                 alert("Task successfully added!");
                 console.log(jsonData)
-                //  $.get('tasks.txt', function(textData) {
-                //      //var aLines = textData
-                // //     //$('#display').append(textData + '\nStatus = ' + status);
-                //     var le = textData.length;
-                //     //alert (le);
-                //      document.getElementById("display").innerHTML = (textData );   // this works, all lines
-                    
-                // //     $.each(aLines, function(n, sLine) {
-                // //       //$('#display').append('<div>' + sLine + '</div>'); // ?????
-                // //        //document.append(n + ' - ' + aLines[n]);      // this also work
-                // //     });
-                    
-                //   });
-
                 $.get('tasks.txt', function (data) {  
-                    var myHrefCollection = '<ul>';  
+                    var myHrefCollection = '<div>';  
                     var myData = data.split("\n");  
                     for (i = 0; i < myData.length; i++) {  
                         if (myData[i] != null || myData[i] != undefined)  
-                            myHrefCollection += '<li>' + myData[i] + '</li>';  
+                            myHrefCollection += '<p>' + myData[i] + '</p>';  
                     }  
-                    myHrefCollection += '</ul>';  
+                    myHrefCollection += '</div>';  
                     $('#display').html(myHrefCollection);  
-                        
-                });  
+                });     
                 
             }
         })
