@@ -1,12 +1,12 @@
 $(document).ready(function(){
     $.get('tasks.txt', function (data) {  
-        var myHrefCollection = '<div>';  
+        var myHrefCollection = '<ol type="1">';  
         var myData = data.split("\n");  
         for (i = 0; i < myData.length; i++) {  
             if (myData[i] != null || myData[i] != undefined)  
-                myHrefCollection += '<p>' + myData[i] + '</p>';  
+                myHrefCollection += '<li>' + myData[i] + '</li>';  
         }  
-        myHrefCollection += '</div>';  
+        myHrefCollection += '<ol>';  
         $('#display').html(myHrefCollection);  
 
     });  
@@ -23,13 +23,13 @@ $(document).ready(function(){
                 alert("Task successfully added!");
                 console.log(jsonData)
                 $.get('tasks.txt', function (data) {  
-                    var myHrefCollection = '<div>';  
+                    var myHrefCollection = '<ol type="1">';  
                     var myData = data.split("\n");  
                     for (i = 0; i < myData.length; i++) {  
                         if (myData[i] != null || myData[i] != undefined)  
-                            myHrefCollection += '<p>' + myData[i] + '</p>';  
+                            myHrefCollection += '<li>' + myData[i] + '</li>';  
                     }  
-                    myHrefCollection += '</div>';  
+                    myHrefCollection += '</ol>';  
                     $('#display').html(myHrefCollection);  
                 });     
                 
