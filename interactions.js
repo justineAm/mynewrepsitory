@@ -23,10 +23,11 @@ $(document).ready(function(){
 
                 console.log(jsonData)
                 jsonData.forEach(element => {
-                    //console.log(element);
-                   return element;
+                    console.log(element);
+                    $('#display').append('<ul><li>'+element+'</li></ul>');
+                 
                 });
-                $('#display').append('<ul><li>'+element+'</li></ul>');
+               
                 
               
                     
@@ -47,18 +48,18 @@ $(document).ready(function(){
             }
         })
     })
-    $('#clearSession').on('click',function(e){
-        e.preventDefault();
-        $.ajax({
-            type:"POST",
-            url: "clearSession.php",
-            success :function(response){
-                var jsonData = JSON.parse(response)
-                console.log(jsonData)
+    // $('#clearSession').on('click',function(e){
+    //     e.preventDefault();
+    //     $.ajax({
+    //         type:"POST",
+    //         url: "clearSession.php",
+    //         success :function(response){
+    //             var jsonData = JSON.parse(response)
+    //             console.log(jsonData)
 
-            }
-        })
-    })
+    //         }
+    //     })
+    // })
 
 
 })
